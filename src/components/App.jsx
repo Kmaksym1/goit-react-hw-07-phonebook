@@ -2,7 +2,6 @@ import { ContactForm } from "components/ContactForm/ContactForm";
 import { Filter } from "components/Filter/Filter";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-// import { Routes, Route } from "react-router-dom";
 import { fetchAllContacts } from "reduxe/operations";
 import ContactList from "./ContactList/ContactList";
 
@@ -24,11 +23,11 @@ export const App = () => {
         padding: "20px",
         boxShadow: "3px 1px 8px rgb(209, 209, 209)",
       }}>
-      {/* <Routes> */}
+      
         <ContactForm />
         <Filter />
         <ContactList />
-      {/* </Routes> */}
+      
     </div>
   );
 };
