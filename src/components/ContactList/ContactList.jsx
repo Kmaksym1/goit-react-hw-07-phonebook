@@ -31,7 +31,7 @@ const ContactList = () => {
     {loading && <Loader color="#4fa94d" className={css.loading} />}
     {error && <h4>Something went wrong, try again later</h4>}
     {contacts.length > 0 ? (
-      <div className="contactsContainer">
+      
         <ul className={css.ulContainer}>
           {visibleContacts.map(({ name, id, phone }) => {
             return (
@@ -57,8 +57,7 @@ const ContactList = () => {
               </li>
             );
           })}
-        </ul>
-      </div>) : (<h4>No contacts</h4>)}
+        </ul>) : (<h4>No contacts</h4>)}
      
     </>
   );

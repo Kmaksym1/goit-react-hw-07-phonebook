@@ -26,6 +26,7 @@
   .ulContainer{
     list-style-type: none;
     width: 100%;
+    padding-left: 0px;
   }
   
   .liContainer{
@@ -33,7 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40vh;
+    
     border-radius: 5px;
     padding: 5px;
     box-shadow: 3px 1px 8px rgb(209, 209, 209);

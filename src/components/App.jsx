@@ -14,7 +14,7 @@ export const App = () => {
     <div
       style={{
         backgroundColor: "#eaf3f8",
-        width: "45vh",
+        width: "80vh",
         display: "block",
         fontSize: "40px",
         margin: "auto",
