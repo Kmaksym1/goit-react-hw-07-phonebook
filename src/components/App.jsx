@@ -23,7 +23,6 @@ export const App = () => {
         padding: "20px",
         boxShadow: "3px 1px 8px rgb(209, 209, 209)",
       }}>
-      
         <ContactForm />
         <Filter />
         <ContactList />

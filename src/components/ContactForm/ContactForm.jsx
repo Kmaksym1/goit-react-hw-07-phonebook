@@ -1,4 +1,4 @@
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import css from "../ContactForm/contactForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const schema = yup.object().shape({
   name: yup.string().required(),
-  phone: yup.string().min(7).max(12).required(),
+  phone: yup.string().min(7).max(13).required(),
 });
 
 export const ContactForm = () => {
@@ -17,8 +17,7 @@ export const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
-    console.log(contacts)
-    
+  
     const existingContact = contacts.find((contact) =>
       contact.name === values.name);
     if (existingContact) {
@@ -42,11 +41,13 @@ export const ContactForm = () => {
           <label htmlFor="name" className="form-label">
             Name
           </label>
-          <Field type="text" name="name" className={css.imputString} />
+            <Field type="text" name="name" className={css.imputString} />
+            <ErrorMessage name="name" component="div"></ErrorMessage>
           <label htmlFor="name" className="form-label">
             Number
           </label>
-          <Field type="tel" name="phone" className={css.imputString} />
+            <Field type="tel" name="phone" className={css.imputString} />
+            <ErrorMessage name="phone" component="div"></ErrorMessage>
         </div>
 
         <button type="submit" className={css.addBtn}>
